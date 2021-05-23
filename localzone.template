@@ -1,0 +1,11 @@
+$ORIGIN {{ domain }}.
+$TTL 60
+
+@                               IN  SOA   ns.{{ domain }}. root.{{ domain }}. ( {{ serial }} 120 60 86400 60 )
+                                IN  NS    ns
+
+myip                            IN  A     {{ wan }}
+
+{% for record in zone -%}
+{{ "%-32sIN  A     %-32s; %s %-12s Priority: %d"|format(record.host, record.ip, record.mac, record.type, record.priority) }}
+{% endfor %}
