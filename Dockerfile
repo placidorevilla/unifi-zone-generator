@@ -13,4 +13,4 @@ COPY --from=builder /root/.local /root/.local
 COPY ./localzone.template /data/
 COPY ./src /app
 
-CMD [ "python", "/app/unifilocal.py" ]
+CMD [ "python", "/app/unifi-zone-generator.py" ]

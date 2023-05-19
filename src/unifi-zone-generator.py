@@ -11,7 +11,7 @@ import click
 import jinja2
 import unificontrol
 
-ENV_PREFIX = "UNIFILOCAL_"
+ENV_PREFIX = "UNIFI_ZONE_GENERATOR_"
 ENV_FILE_SUFFIX = "__FILE"
 
 DEFAULT_DOMAIN = "localdomain"
@@ -21,7 +21,7 @@ DEFAULT_UNIFI_PORT = 8443
 DEFAULT_NETWORKS = "0.0.0.0/0,::0/0"
 
 logging.basicConfig()
-logger = logging.getLogger(__name__ if __name__ != "__main__" else "unifilocal")
+logger = logging.getLogger(__name__ if __name__ != "__main__" else "unifi-zone-generator")
 
 
 class TypeMC(type):

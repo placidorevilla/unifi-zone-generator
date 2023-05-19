@@ -1,2 +1,2 @@
-# unifilocal
+# unifi-zone-generator
 
